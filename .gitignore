@@ -32,5 +32,6 @@ build/
 *.njsproj
 *.sln
 *.sw?
+.turbo
 
 *.local
