@@ -1,0 +1,150 @@
+# Portfolio
+
+Every time you choose to apply a rule(s), explicitly state the rule(s) in the output. You can abbreviate the rule description to a single word or phrase.
+
+## Project Context
+
+A personal portfolio website to display my skills and experience in Software Development.
+
+## Code Style and Structure
+
+-   Write concise, technical TypeScript code with accurate examples
+-   Use functional and declarative programming patterns; avoid classes
+-   Prefer iteration and modularization over code duplication
+-   Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError)
+-   Structure repository files as follows:
+
+```
+client/
+├──src/
+    ├── assets/         # Static assets
+    ├── components/     # Shared React components
+        ├── example-component/     # Example related component folder
+            ├── example-component1.tsx     # Example component
+            ├── example-component2.tsx     # Example component
+            ├── index.tsx                 # export file for all components in folder
+        ├── styles/         # Custom styles and css files
+        ├── utils/          # Helper functions
+        ├── views/          # Sections in the main page
+        └── lib/            # Shared libraries
+```
+
+```
+server/
+├── src/
+│   ├── modules/          # Feature modules
+│   │   ├── weather/      # Weather module
+│   │   │   ├── weather.controller.ts
+│   │   │   ├── weather.service.ts
+│   │   │   ├── weather.module.ts
+│   │   │   ├── weather.entity.ts   # Database model (if using SQL)
+│   ├── main.ts            # Entry point
+│   ├── app.module.ts      # Root module
+├── .env                   # Environment variables
+```
+
+## Tech Stack
+
+-   React
+-   TypeScript
+-   Tailwind CSS
+-   FontAwesome
+-   Framer Motion
+-   Vite
+-   NestJS
+
+## Naming Conventions
+
+-   Use lowercase with dashes for directories (e.g., components/form-wizard)
+-   Favor named exports for components and utilities
+-   Use PascalCase for component files (e.g., VisaForm.tsx)
+-   Use camelCase for utility files (e.g., formValidator.ts)
+
+## TypeScript Usage
+
+-   Use TypeScript for all code; prefer interfaces over types
+-   Avoid enums; use const objects with 'as const' assertion
+-   Use functional components with TypeScript interfaces
+-   Enable strict mode in TypeScript for better type safety.
+-   Define strict types for message passing between different parts of the extension
+-   Use absolute imports for all files @/...
+-   Avoid try/catch blocks unless there's good reason to translate or handle error in that abstraction
+-   Use explicit return types for all functions
+
+## State Management
+
+-   Use React Context for global state when needed
+-   Implement proper cleanup in useEffect hooks
+
+## Syntax and Formatting
+
+-   Use "function" keyword for pure functions
+-   Avoid unnecessary curly braces in conditionals
+-   Use declarative JSX
+-   Implement proper TypeScript discriminated unions for message types
+-   Use Prettier for consistent code formatting
+
+## UI and Styling
+
+-   Use Tailwind CSS for styling and simple static animations
+-   Use Framer Motion for complex moving animations
+-   Use React Vertical Timeline Component for timeline
+-   Use React Scroll for smooth scrolling
+-   Use FontAwesome for icons
+-   Implement responsive design with Flexbox and useWindowDimensions.
+
+## Error Handling
+
+-   Implement proper error boundaries
+-   Log errors appropriately for debugging
+-   Provide user-friendly error messages
+-   Handle network failures gracefully
+
+## Testing
+
+-   Write unit tests for utilities and components
+-   Implement E2E tests for critical flows
+-   Test across different Chrome versions
+-   Test memory usage and performance
+
+## Security
+
+-   Implement Content Security Policy
+-   Sanitize user inputs
+-   Handle sensitive data properly
+
+## Git Usage
+
+Commit Message Prefixes:
+
+-   "fix:" for bug fixes
+-   "feat:" for new features
+-   "perf:" for performance improvements
+-   "docs:" for documentation changes
+-   "style:" for formatting changes
+-   "refactor:" for code refactoring
+-   "test:" for adding missing tests
+-   "chore:" for maintenance tasks
+
+Rules:
+
+-   Use lowercase for commit messages
+-   Keep the summary line concise
+-   Include description for non-obvious changes
+-   Reference issue numbers when applicable
+
+## Documentation
+
+-   Maintain clear README with setup instructions
+-   Document API interactions and data flows
+-   Keep manifest.json well-documented
+-   Don't include comments unless it's for complex logic
+-   Document permission requirements
+
+## Development Workflow
+
+-   Use proper version control
+-   Implement proper code review process
+-   Test in multiple environments
+-   Follow semantic versioning for releases
+-   Maintain changelog
