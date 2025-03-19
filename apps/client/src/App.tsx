@@ -12,7 +12,9 @@ import { Button } from '@mui/material';
 import PlaceIcon from '@mui/icons-material/Place';
 import AllRecords from './components/records';
 import { WeatherData } from './components/records/types/weatherInterface';
-import { writeFileSync } from 'fs';
+import InfoIcon from '@mui/icons-material/Info';
+import IconButton from '@mui/material/IconButton';
+import Tooltip from '@mui/material/Tooltip';
 
 interface LocationAddress {
     city?: string;
@@ -112,6 +114,10 @@ function App() {
         }
         if (endDate) {
             params.end_date = endDate.format('YYYY-MM-DD');
+        }
+        if (startDate && endDate && startDate.isAfter(endDate)) {
+            window.alert('Start date must be before end date');
+            return;
         }
         if (place.lat && place.lon) {
             setLocation(place.display_name);
@@ -240,7 +246,17 @@ function App() {
     return (
         <div className="flex flex-row gap-4 w-full h-auto min-h-screen fixed top-0 left-0 bg-gray-200">
             <div className="flex flex-col items-center gap-4 max-w-[70%]">
-                <div className="flex flex-row w-full pt-10 pb-10 h-16 bg-gray-800 items-center m-10 justify-center text-white z-0 gap-5 pl-2 pr-2">
+                <div className="flex flex-row items-center justify-center">
+                    <h1 className="text-2xl font-bold">
+                        Promise Ononokpono. Weather App for PM Accelerator
+                    </h1>
+                    <Tooltip title="PMA supports professionals at all career stages, from entry-level to executive roles, helping them develop essential product management and leadership skills. The program offers job hunting support, AI product management training, leadership coaching, and resume reviews, with access to a vast alumni network and free training resources. For more details, visit the LinkedIn page: Product Manager Accelerator.">
+                        <IconButton>
+                            <InfoIcon />
+                        </IconButton>
+                    </Tooltip>
+                </div>
+                <div className="flex flex-row w-full pt-10 pb-10 h-16 bg-gray-800 items-center m-5 justify-center text-white z-0 gap-5 pl-2 pr-2">
                     <PlaceIcon />
                     <text>{location}</text>
                     <SearchLocation setPlace={setPlace} />
