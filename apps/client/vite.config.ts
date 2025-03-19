@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => {
                 '/server': {
                     target: env.VITE_API_URL, // Use environment variable or fallback
                     changeOrigin: true, // For cross-origin requests
-                    secure: false, // For self-signed certificates
+                    secure: true, // For self-signed certificates
                 },
             },
         },
