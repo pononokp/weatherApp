@@ -8,16 +8,22 @@ export class WeatherController {
     @Get()
     async getWeather(
         @Query('latitude') latitude: number,
-        @Query('longitude') longitude: number
+        @Query('longitude') longitude: number,
+        @Query('start_date') startDate: string,
+        @Query('end_date') endDate: string
     ) {
         if (!latitude || !longitude) {
             return {
                 error: 'Latitude and longitude are required',
             };
         }
-        return this.weatherService.getWeather({
-            latitude,
-            longitude,
-        });
+        return this.weatherService.getWeather(
+            {
+                latitude,
+                longitude,
+            },
+            startDate,
+            endDate
+        );
     }
 }
