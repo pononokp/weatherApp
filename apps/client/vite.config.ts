@@ -17,15 +17,16 @@ export default defineConfig(({ mode }) => {
         server: {
             proxy: {
                 '/server': {
-                    target: env.VITE_API_URL || 'http://localhost:3000', // Use environment variable or fallback
+                    target: env.VITE_API_URL, // Use environment variable or fallback
                     changeOrigin: true, // For cross-origin requests
                     secure: false, // For self-signed certificates
                 },
             },
         },
         define: {
-            // Ensure process.env variables are available for the frontend
-            'process.env': env,
+            'import.meta.env': {
+                ...env, // Expose all env variables
+            },
         },
     };
 });
