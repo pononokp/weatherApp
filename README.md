@@ -2,8 +2,8 @@
 
 A full-stack weather application that allows users to search for weather data, save records, and view historical and forecast weather information.
 
-#Preview
-https://github.com/user-attachments/assets/eda18e2b-b0bf-48fa-b8e1-cbd5b8e01529
+##Preview
+<p align="center"><img width="700" alt="image" src="https://github.com/user-attachments/assets/eda18e2b-b0bf-48fa-b8e1-cbd5b8e01529" /></p>
 
 ## Features
 
