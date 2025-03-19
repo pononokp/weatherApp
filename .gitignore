@@ -33,5 +33,6 @@ build/
 *.sln
 *.sw?
 .turbo
+.windsurfrules
 
 *.local

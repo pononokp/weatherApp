@@ -12,7 +12,6 @@ import { Button } from '@mui/material';
 import PlaceIcon from '@mui/icons-material/Place';
 import AllRecords from './components/records';
 import { WeatherData } from './components/records/types/weatherInterface';
-import { writeFileSync } from 'fs';
 
 interface LocationAddress {
     city?: string;
@@ -112,6 +111,10 @@ function App() {
         }
         if (endDate) {
             params.end_date = endDate.format('YYYY-MM-DD');
+        }
+        if (startDate && endDate && startDate.isAfter(endDate)) {
+            window.alert('Start date must be before end date');
+            return;
         }
         if (place.lat && place.lon) {
             setLocation(place.display_name);
