@@ -11,19 +11,21 @@ export default defineConfig(({ mode }) => {
         plugins: [react(), tailwindcss()],
         resolve: {
             alias: {
-                '@': path.resolve(__dirname, './src'),
+                '@': path.resolve(__dirname, './src'), // Set up alias for easier imports
             },
         },
         server: {
             proxy: {
                 '/server': {
-                    target: env.VITE_API_URL || 'http://localhost:3000', // Use env variable or fallback
-                    changeOrigin: true,
+                    target: env.VITE_API_URL || 'http://localhost:3000', // Use environment variable or fallback
+                    changeOrigin: true, // For cross-origin requests
+                    secure: false, // For self-signed certificates
                 },
             },
         },
         define: {
-            'process.env': env, // Ensure process.env variables are available
+            // Ensure process.env variables are available for the frontend
+            'process.env': env,
         },
     };
 });
