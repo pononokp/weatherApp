@@ -38,10 +38,8 @@ export class FirebaseService {
 
         // Initialize Firebase app and Firestore
         try {
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
             this.app = initializeApp(firebaseConfig);
             console.log('Firebase app initialized successfully.');
-            // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
             this.firestore = getFirestore(this.app);
             console.log('Firebase Firestore initialized successfully.');
         } catch (error) {

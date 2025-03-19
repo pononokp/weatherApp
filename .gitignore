@@ -33,6 +33,13 @@ build/
 *.sln
 *.sw?
 .turbo
-.windsurfrules
+*.windsurfrules
 
 *.local
+# Backend
+apps/server/.env*
+apps/server/.env.*
+
+# Frontend
+apps/client/.env*
+apps/client/.env.*
