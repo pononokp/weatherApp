@@ -1,4 +1,4 @@
-# Weather Application !!
+# Weather Application
 
 A full-stack weather application that allows users to search for weather data, save records, and view historical and forecast weather information.
 
