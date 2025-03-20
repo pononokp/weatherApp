@@ -44,12 +44,13 @@ const SearchLocation = ({ setPlace }: SearchLocationProps) => {
     return (
         <div className="flex flex-col justify-center">
             <div className="flex flex-col">
-                <div className="flex flex-row rounded-lg border">
+                <div className="flex flex-row rounded-2xl border items-center">
                     <div className="">
                         <SearchIcon />
                     </div>
-                    <div className="">
+                    <div className="h-10">
                         <input
+                            className="w-full h-10 border-none focus:outline-none"
                             type="text"
                             name="search-city"
                             placeholder="Search city ..."

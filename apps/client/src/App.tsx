@@ -246,8 +246,8 @@ function App() {
     }
 
     return (
-        <div className="flex flex-row gap-4 w-full h-auto min-h-screen fixed top-0 left-0 bg-gray-200">
-            <div className="flex flex-col items-center gap-4 max-w-[70%]">
+        <div className="flex flex-row gap-3 w-full h-auto min-h-screen fixed top-0 left-0 bg-white">
+            <div className="flex flex-col items-center gap-4 max-w-[70%] min-w-[70%] rounded-lg border-2 bg-gray-200 mt-3 mb-3 ml-3">
                 <div className="flex flex-row items-center justify-center">
                     <h1 className="text-2xl font-bold">
                         Promise Ononokpono. Weather App for PM Accelerator
@@ -260,18 +260,20 @@ function App() {
                 </div>
                 <div className="flex flex-row w-full pt-10 pb-10 h-16 bg-gray-800 items-center m-5 justify-center text-white z-0 gap-5 pl-2 pr-2">
                     <PlaceIcon />
-                    <text>{location}</text>
+                    <text className="max-w-[400px] min-w-[400px]">
+                        {location}
+                    </text>
                     <SearchLocation setPlace={setPlace} />
                     <LocalizationProvider dateAdapter={AdapterDayjs}>
                         <div className="flex flex-row gap-2">
                             <DatePicker
-                                className="text-white bg-white"
+                                className="text-white bg-white rounded-lg"
                                 label="Start Date"
                                 value={startDate}
                                 onChange={(newValue) => setStartDate(newValue)}
                             />
                             <DatePicker
-                                className="text-white bg-white"
+                                className="text-white bg-white rounded-lg"
                                 label="End Date"
                                 value={endDate}
                                 onChange={(newValue) => setEndDate(newValue)}
@@ -291,12 +293,12 @@ function App() {
                         Save
                     </Button>
                 </div>
-                <div className="flex flex-col items-center gap-4 h-[800px] overflow-y-auto">
+                <div className="flex flex-col items-center gap-4 h-[750px] overflow-y-auto">
                     <CurrentWeatherCard current={current} />
                     <SevenDayForeCast days={daily} />
                 </div>
             </div>
-            <div className="flex flex-col items-center gap-4 mt-10 h-[90vh] overflow-y-auto">
+            <div className="flex flex-col items-center gap-4 h-[90vh] overflow-y-auto mb-10 rounded-lg border-2 bg-gray-200 mr-3 my-3 p-3">
                 <AllRecords
                     setWeatherData={setWeatherData}
                     setCurrentId={setCurrentId}
@@ -304,14 +306,16 @@ function App() {
                     clearSelection={clearSelection}
                 />
             </div>
-            <div className="flex flex-row fixed bottom-10 right-10 gap-4 z-30">
+            <div className="flex flex-row fixed bottom-5 right-10 gap-4 z-30">
                 <Button
+                    className="rounded-lg"
                     variant="contained"
                     onClick={() => exportData()}
                 >
                     Export
                 </Button>
                 <Button
+                    className="rounded-lg"
                     variant="contained"
                     onClick={() => clearSelection()}
                 >
