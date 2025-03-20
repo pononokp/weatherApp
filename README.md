@@ -132,4 +132,4 @@ Users can export weather data to JSON format. The exported file includes:
 
 ## Contact
 
-For any questions or issues, please contact [promiseono@gmail.com](mailto:your-email@example.com).
+For any questions or issues, please contact [promiseono@gmail.com](mailto:promiseono@gmail.com).
