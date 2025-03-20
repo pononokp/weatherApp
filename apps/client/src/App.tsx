@@ -298,7 +298,7 @@ function App() {
                     <SevenDayForeCast days={daily} />
                 </div>
             </div>
-            <div className="flex flex-col items-center gap-4 h-[90vh] overflow-y-auto mb-10 rounded-lg border-2 bg-gray-200 mr-3 my-3 p-3 w-full">
+            <div className="flex-col items-center gap-4 h-[90vh] overflow-y-auto mb-10 rounded-lg border-2 bg-gray-200 mr-3 my-3 p-3 w-full">
                 <AllRecords
                     setWeatherData={setWeatherData}
                     setCurrentId={setCurrentId}
