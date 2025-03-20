@@ -8,7 +8,7 @@ A full-stack weather application that allows users to search for weather data, s
 
 ## Hosting
 
-- Frontend: Vervel
+- Frontend: Vercel
 - Backend: Render
 
 ## Features
