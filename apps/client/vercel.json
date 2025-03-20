@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/server/:path*",
+            "destination": "https://weatherapp-qo5s.onrender.com/server/:path*"
+        }
+    ]
+}

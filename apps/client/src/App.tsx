@@ -126,9 +126,8 @@ function App() {
             params.latitude = Number(place.lat);
             params.longitude = Number(place.lon);
         }
-        const apiUrl = import.meta.env.VITE_API_URL;
         axios
-            .get(`${apiUrl}/weather`, { params })
+            .get('/server/weather', { params })
             .then((response) => {
                 console.log(response.data);
                 setWeather(response.data);
