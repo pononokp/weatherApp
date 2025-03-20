@@ -1,6 +1,6 @@
 # Weather Application
 
-A full-stack weather application that allows users to search for weather data, save records, and view historical and forecast weather information.
+A full-stack weather application that allows users to search for weather data, save records, and view historical and forecast weather information. Please give some time for the backend server to spin up. It is the free tier of Render
 
 ## Preview
 
