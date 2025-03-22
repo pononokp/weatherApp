@@ -40,8 +40,6 @@ interface WeatherForecast {
     weatherCode: number;
 }
 function App() {
-    console.log('API URL:', import.meta.env.VITE_API_URL);
-
     const [forceUpdate, setForceUpdate] = useState(false);
     const [currentId, setCurrentId] = useState('');
     const [latitude, setLatitude] = useState('');
